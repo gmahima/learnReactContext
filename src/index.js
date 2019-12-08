@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "./context";
 import "./styles.css";
+import Show from "./show";
 class App extends Component {
   state = {
     number: 10
@@ -14,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <Provider value={this.state}>
-        <button>hi</button>
+        <Show />
       </Provider>
     );
   }
