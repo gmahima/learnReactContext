@@ -1,6 +1,5 @@
 import React from "react";
 import { Consumer } from "./context";
-import ShowAgain from "./again";
 export default function Show() {
   return [
     <Consumer>
