@@ -13,8 +13,10 @@ class App extends Component {
     }));
   };
   render() {
+    const number = this.state.number;
+    const inc = this.inc;
     return (
-      <Provider value={this.state}>
+      <Provider value={{ number, inc }}>
         <Show />
       </Provider>
     );

@@ -1,15 +1,14 @@
 import React from "react";
 import { Consumer } from "./context";
 import Child from "./child";
-export default function Show() {
+export default function Again() {
   return (
     <div>
       <Consumer>
         {context => {
-          return <h1>{context.number}</h1>;
+          return <button onClick={context.inc}>{context.number}</button>;
         }}
       </Consumer>
-      <Child />
     </div>
   );
 }
