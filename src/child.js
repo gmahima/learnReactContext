@@ -1,14 +1,14 @@
-import React from "react";
-import { Consumer } from "./context";
-import Child from "./child";
+import React, {useContext} from "react";
+import { Context } from "./context";
 export default function Again() {
+  const context = useContext(Context)
   return (
     <div>
-      <Consumer>
-        {context => {
-          return <button onClick={context.inc}>{context.number}</button>;
-        }}
-      </Consumer>
+     
+        
+          <button onClick={context.increment}>{context.number}</button>
+        
+   
     </div>
   );
 }

@@ -1,5 +1,17 @@
-import React from "react";
+import React, {createContext, useState} from "react";
 
-const Context = React.createContext();
-export const Provider = Context.Provider;
-export const Consumer = Context.Consumer;
+export const Context = createContext(null);
+
+export const Provider = (props) => {
+    const [number, setNumber] = useState(0);
+const increment = () => {
+    setNumber(number + 10);
+}
+    return (
+        <Context.Provider value={
+            {number: number, increment: increment}
+        }>
+            {props.children}
+        </Context.Provider>
+    )
+}
