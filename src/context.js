@@ -4,6 +4,7 @@ export const Context = createContext(null);
 
 export const Provider = (props) => {
     const [number, setNumber] = useState(0);
+    
 const increment = () => {
     setNumber(number + 10);
 }
